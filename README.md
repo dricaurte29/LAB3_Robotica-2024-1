@@ -24,7 +24,7 @@ En este código, se inicializa ROS, crea un publicador para enviar comandos de v
 
 Segundo Script: https://github.com/dricaurte29/LAB3_Robotica-2024-1/blob/5e2bddc1a95a71f3d0e96a30c07e136c9d061fca/scriptsMatlab/turtle1.m
 
-En este código se realiza una conexión conROS, se obtiene información referente a la posición y orientación de la tortuga y luego cierra la conexión con ROS.
+En este código se realiza una conexión con el nodo de ROS, se obtiene información referente a la posición y orientación de la tortuga y luego cierra la conexión con ROS.
 
 ![Funcionamiento del segundo script](media/robmat2.png)
 
@@ -36,6 +36,21 @@ En este código se establece una conexión con ROS, se utiliza un servicio para 
 
 ## Descripción de la Solución Planteada Python
 Script: https://github.com/dricaurte29/LAB3_Robotica-2024-1/blob/5e2bddc1a95a71f3d0e96a30c07e136c9d061fca/scriptsPython/myTeleopKey.py
+
+Este script Python proporciona un controlador para una tortuga simulada en el paquete Turtlesim de ROS (Robot Operating System). Permite controlar los movimientos y la orientación de la tortuga utilizando las teclas del teclado.
+
+### Funcionamiento
+
+El script incluye las siguientes funciones principales:
+
+- `move_forward()`: Mueve la tortuga hacia adelante.
+- `move_backward()`: Mueve la tortuga hacia atrás.
+- `rotate_clockwise()`: Gira la tortuga en sentido horario.
+- `rotate_counterclockwise()`: Gira la tortuga en sentido antihorario.
+- `reset_pose()`: Teletransporta la tortuga a la posición y orientación centrales.
+- `rotate_180_degrees()`: Teletransporta la tortuga para girar 180 grados.
+
+Además, el script utiliza la función `getkey()` para obtener la entrada del teclado sin necesidad de presionar Enter, y un bucle principal para detectar las teclas presionadas y llamar a las funciones correspondientes del controlador.
 
 Este código se encarga de controlar un robot tortuga en el entorno ROS desde python mediante entradas de teclado:
 - W: Movimiento hacia adelante
